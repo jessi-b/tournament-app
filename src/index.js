@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import { legacy_createStore, applyMiddleware } from 'redux';
+import { rootReducer } from './reducers';
+import { createLogger } from 'redux-logger';
 
+const loggerMiddleWare = legacy_createStore
+const store = legacy_createStore(rootReducer, applyMiddleware(loggerMiddleWare))
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
