@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './home.css';
 
 class HomePage extends Component {
@@ -19,8 +19,10 @@ class HomePage extends Component {
   }
   render () {
     return (
-      <h1>Tournament Tracker</h1>
-      (this.renderTeams())
+    <div className = "home-page container">
+      <h1 className="text-center home-title">Tournament Tracker</h1>
+      <button type = "button" className = "btn-block btn-primary"> Add Team </button>
+    </div>
     );
   }
 }

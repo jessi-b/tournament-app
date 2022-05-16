@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import HomePage from "../components/home-page/home";
 
+
 const mapStateToProps = state => ({
   teams: state.teams
 })
