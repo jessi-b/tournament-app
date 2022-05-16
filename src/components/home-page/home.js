@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './home.css';
-import { BrowserRouter as Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
 class HomePage extends Component {
   constructor(props) {
@@ -35,13 +35,13 @@ class HomePage extends Component {
       )
     }
     return (
-    <div className = "home-page container">
-      <h1 className = "text-center"> Tournament Tracker </h1>
-      <button onClick = {this.addTeam()} type = "button" className = "btn-block btn-primary"> Add Team </button>
-      <div className = "team-view">
-        {/* {this.renderTeams()} */}
+      <div className = "home-page container">
+        <h1 className = "text-center"> Tournament Tracker </h1>
+        <button onClick = {this.addTeam()} type = "button" className = "btn-block btn-primary"> Add Team </button>
+        <div className = "team-view">
+          {this.renderTeams()}
+        </div>
       </div>
-    </div>
     );
   }
 }
