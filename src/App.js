@@ -2,9 +2,9 @@ import './App.css';
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //containers
-import HomeContainer from './containers/HomeContainer'
+import HomeContainer from './containers/HomeContainer';
+import AddTeamContainer from './containers/AddTeamContainer';
 //pages
-import AddTeamPage from './components/add-team/add-team';
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Route exact path = "/" component={HomeContainer} />
-          <Route path = "/add-team" component={AddTeamPage} />
+          <Route path = "/add-team" component={AddTeamContainer} />
         </Router>
       </div>
     );
